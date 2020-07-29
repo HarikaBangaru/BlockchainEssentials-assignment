@@ -1,2 +1,35 @@
 TEST DEPLOYMENT OF SMART CONTRACT CAN BE FOUND AT   0x6894d7d847c081924b2f2aacb7940da35d98cf4f IN 
 https://ropsten.etherscan.io/tx/0xc240ec7429ca0bb1382289e3040b862c874341186b0e5aa1783d8739c6a46681
+
+
+
+PROGRAM
+
+pragma solidity ^0.4.17 <0.6.12;
+
+contract card{
+    string public name;
+    uint public rno;
+    uint public batch;
+    uint public m1;
+    uint public m2;
+    uint public m3;
+    uint public m4;
+    string public status;
+    
+    function report(string nname,uint nrno,uint nbatch,uint nm1,uint nm2,uint nm3,uint nm4,string nstatus) public{
+        name=nname;
+        rno=nrno;
+        batch=nbatch;
+        m1=nm1;
+        m2=nm2;
+        m3=nm3;
+        m4=nm4;
+        status=nstatus;
+        
+    }
+    function getdetails()public view returns(string,uint,uint,uint,uint,uint,uint,string){
+        return(name,rno,batch,m1,m2,m3,m4,status);
+    }
+    
+}
